@@ -33,10 +33,10 @@ function music2 () {
     music.setVolume(255)
     if (uartData == "1") {
         music.playTone(262, music.beat(BeatFraction.Whole))
-        SuperBit.Servo(SuperBit.enServo.S1, 0)
+        SuperBit.Servo(SuperBit.enServo.S1, 20)
     } else if (uartData == "2") {
         music.playTone(294, music.beat(BeatFraction.Whole))
-        SuperBit.Servo(SuperBit.enServo.S1, 120)
+        SuperBit.Servo(SuperBit.enServo.S1, 50)
     } else if (uartData == "3") {
         music.playTone(330, music.beat(BeatFraction.Whole))
     } else if (uartData == "4") {
@@ -54,6 +54,6 @@ function music2 () {
 let uartData = ""
 let connected = 0
 connected = 0
-SuperBit.Servo2(SuperBit.enServo.S1, 105)
+SuperBit.Servo2(SuperBit.enServo.S1, 50)
 bluetooth.startUartService()
 basic.showString("ON")
